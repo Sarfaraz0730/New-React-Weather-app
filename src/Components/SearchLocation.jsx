@@ -1,10 +1,23 @@
-import React from 'react'
-
+import '../Style/SearchLocation.css'
 const SearchLocation = () => {
   return (
-    <div>
-      <h1>Location</h1>
-    </div>
+   <>
+   
+  
+
+    <section>
+    <div className='container'>
+        <div>1</div>
+        <div> <input id='searchLocation'  type="text" name=""   placeholder='Enter City Name'  /></div>
+       
+        <div> <button className='Search-Button' >Logo</button> </div>
+
+     </div>
+    </section>
+   
+     
+   
+   </>
   )
 }
 
