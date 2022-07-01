@@ -13,24 +13,28 @@ const SearchLocation = () => {
   const [wind, setWind] = useState("");
 
 
+        const fetchApi = async () => {
+          const url = `https://api.openweathermap.org/data/2.5/weather?q=${search}&&units=metric&appid=35dda4b74680a4f66fe72fd65ba4569d`;
+
+          const response = await fetch(url);
+
+          const resJson = await response.json();
+          console.log("Response Current data ", resJson);
+
+          setCity(resJson.main.temp);
+          console.log("city temp", city);
+          setIcons(resJson.weather[0]);
+          setWind(resJson.wind);
+
+          // console.log("Current temp", resJson.main.temp);
+          // console.log("city temp" ,  city.temp)
+        };
+
   useEffect(() => {
-     const fetchApi = async () => {
-       const url = `https://api.openweathermap.org/data/2.5/weather?q=${search}&&units=metric&appid=35dda4b74680a4f66fe72fd65ba4569d`;
-
-       const response = await fetch(url);
-
-       const resJson = await response.json();
-       console.log("resjson", resJson);
-
-       setCity(resJson.main);
-       setIcons(resJson.weather[0]);
-       setWind(resJson.wind);
-
-       console.log("Current temp",resJson.main.temp)
-     };
 
      fetchApi();
-   },[search])
+  }, [search])
+     console.log("city temp", city);
   
   return (
     <>
@@ -39,9 +43,13 @@ const SearchLocation = () => {
           <div className="searchDiv">
             <img className="locationIcon" src={location} alt="" />
             <input
+              onChange={(event) => {
+                setSearch(event.target.value);
+              }}
               id="searchLocation"
               type="text"
               name=""
+              value={search}
               placeholder="Enter City Name"
             />
             <img className="searchIcon" src={Search_Icon_svg} alt="" />
@@ -50,15 +58,31 @@ const SearchLocation = () => {
       </section>
 
       <section>
-        <div className="Daily-data">
-          <WeeklyForecast search={ search} />
+        <div className="Daily-data-weekly">
+          <WeeklyForecast search={search} />
         </div>
       </section>
 
       <section>
         <div className="Daily-data">
-  
+          <div className="today-temp">
+            <div>
+              <h1 className="city-temp"> {city}°C </h1>
+            </div>
+            <div>
+              {" "}
+              <img
+                className="p1"
+                src={`https://Openweathermap.org/img/w/${icons.icon}.png`}
+                alt=""
+              />
+            </div>
+          </div>
         </div>
+      </section>
+
+      <section>
+        <div className="Daily-data"></div>
       </section>
     </>
   );

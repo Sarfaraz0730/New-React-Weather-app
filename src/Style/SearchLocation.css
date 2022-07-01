@@ -10,6 +10,7 @@
 }
 .searchDiv{
     position: relative;
+    margin-left: 25px;
 
 
 }
@@ -26,7 +27,8 @@
     font-weight: 600;
     text-transform: capitalize;
     transition: box-shadow .2s ease;
-    width: 450px;
+    width: 620px;
+   
     
 }
 
@@ -45,10 +47,36 @@
   left: 2px;
   top: 5px;
 }
+.Daily-data-weekly{
+    height: auto;
+    width: 50%;
+    margin-left: 26%;
+    margin-top: 10px;
+}
 .Daily-data{
     border: 1px solid red;
     height: 40Vh;
-    width: 38%;
-    margin-left: 31%;
+    width: 50%;
+    margin-left: 26%;
     margin-top: 10px;
+}
+.today-temp{
+    border: 1px solid black;
+    height: 85px;
+    margin: 2px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+}
+.city-temp{
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0;
+    color: #000;
+}
+.p1{
+    margin-top: 10px;
+    margin-left: 10px;
+    height: 50px;
+    width: 50px;
 }
