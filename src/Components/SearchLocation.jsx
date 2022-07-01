@@ -1,24 +1,25 @@
-import '../Style/SearchLocation.css'
+import "../Style/SearchLocation.css";
+import Search_Icon_svg from "../Assests/Search_Icon.svg.png";
+import location from "../Assests/location.jpg"
 const SearchLocation = () => {
   return (
-   <>
-   
-  
+    <>
+      <section>
+        <div className="container">
+          <div className="searchDiv">
+           <img className="locationIcon"  src= {location} alt="" />
+            <input
+              id="searchLocation"
+              type="text"
+              name=""
+              placeholder="Enter City Name"
+            />
+            <img className="searchIcon" src={Search_Icon_svg} alt="" />
+          </div>
+        </div>
+      </section>
+    </>
+  );
+};
 
-    <section>
-    <div className='container'>
-        <div>1</div>
-        <div> <input id='searchLocation'  type="text" name=""   placeholder='Enter City Name'  /></div>
-       
-        <div> <button className='Search-Button' >Logo</button> </div>
-
-     </div>
-    </section>
-   
-     
-   
-   </>
-  )
-}
-
-export default SearchLocation
+export default SearchLocation;

@@ -4,6 +4,13 @@
     margin-top: 5px;
     text-align: center;
     justify-content: center;
+    position: relative;
+
+
+}
+.searchDiv{
+    position: relative;
+
 
 }
 
@@ -15,23 +22,26 @@
     display: block;
     border-radius: 8px;
     height: 0.1rem;
-    padding: 1.75rem 1.75rem 1.75rem 3rem;
+    padding: 1.75rem 1.75rem 1.75rem 2.75rem;
     font-weight: 600;
     text-transform: capitalize;
     transition: box-shadow .2s ease;
     width: 450px;
     
 }
-.Search-Button{
-    writing-mode: horizontal-tb !important;
-    text-rendering: auto;
-    color: buttontext;
-    letter-spacing: normal;
-    word-spacing: normal;
-    line-height: normal;
-    text-transform: none;
-    text-indent: 0px;
-    text-shadow: none;
-    text-align: center;
-    cursor: default;  
+
+.searchIcon{
+     height: 2.25rem;
+     width: 2.25rem; 
+    position: absolute ;
+    right: 0;
+    top: 5px;
+    
+}
+.locationIcon{
+  height: 2.25rem;
+  width: 2.25rem;
+  position: absolute;
+  left: 2px;
+  top: 5px;
 }
