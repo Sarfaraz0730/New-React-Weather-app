@@ -1,16 +1,23 @@
 import "../Style/SearchLocation.css";
 import Search_Icon_svg from "../Assests/Search_Icon.svg.png";
+import p1 from "./images/p1.webp"
+
+
 
 import location from "../Assests/location.jpg"
 import { useState } from "react";
 import { useEffect } from "react";
 import WeeklyForecast from "./WeeklyForecast";
+import Graph from "./Graph";
+
 
 const SearchLocation = () => {
   const [city, setCity] = useState(null);
   const [search, setSearch] = useState("Delhi");
   const [icons, setIcons] = useState("");
   const [wind, setWind] = useState("");
+
+
 
 
         const fetchApi = async () => {
@@ -70,20 +77,32 @@ const SearchLocation = () => {
               <h1 className="city-temp"> {city}°C </h1>
             </div>
             <div>
-              {" "}
               <img
                 className="p1"
                 src={`https://Openweathermap.org/img/w/${icons.icon}.png`}
-                alt=""
+                alt={p1}
               />
             </div>
           </div>
+          {/* belowe div is for graph 1 */}
+          <div className="graph-div">
+            <Graph />
+          </div>
+          {/* graph div is end above 1 */}
         </div>
       </section>
 
+
+
+
+
+      
+
+      {/* belowe div is for graph 2 */}
       <section>
-        <div className="Daily-data"></div>
+        <div className="Daily-data">Graph</div>
       </section>
+      {/* graph div is end above 2 */}
     </>
   );
 };
