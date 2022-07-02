@@ -26,7 +26,7 @@ ChartJS.register(
 const Humdity = () => {
 
      const [data, setData] = useState({
-       labels: [1, 2, 3],
+       labels: ["5am", "2pm", "6pm"],
        datasets: [
          {
            label: "Tempreture",
