@@ -46,7 +46,7 @@ const WeeklyForecast = (search) => {
         <div className="hover1">
           <h5>Mon</h5>
           <p className="font-size-temp">
-            {week.temp_max} ° {"  " + "  |  "} {week.temp_min} °{" "}
+            {week.temp_max} ° {"  " + "    "} {week.temp_min} °{" "}
           </p>
           <img className="icons-week" src={p1} alt="" />
         </div>
@@ -55,7 +55,7 @@ const WeeklyForecast = (search) => {
           {" "}
           <h5>Tue </h5>{" "}
           <p className="font-size-temp">
-            {day1.temp_max} ° {"  " + "  |  "} {day1.temp_min} °{" "}
+            {day1.temp_max} ° {"  " + "    "} {day1.temp_min} °{" "}
           </p>{" "}
           <img className="icons-week" src={p1} alt="" />{" "}
         </div>
@@ -63,47 +63,43 @@ const WeeklyForecast = (search) => {
           {" "}
           <h5>Wed</h5>{" "}
           <p className="font-size-temp">
-            {day2.temp_max} ° {"  " + "  |  "} {day2.temp_min} °{" "}
+            {day2.temp_max} °  {day2.temp_min} °{" "}
           </p>{" "}
           <img className="icons-week" src={shiny} alt="" />{" "}
         </div>
         <div className="hover1">
-          {" "}
           <h5>Thru</h5>{" "}
           <p className="font-size-temp">
-            {day3.temp_max} ° {"  " + "  |  "} {day3.temp_min} °{" "}
-          </p>{" "}
-          <img className="icons-week" src={p1} alt="" />{" "}
+            {day3.temp_max} ° {day3.temp_min} °
+          </p> 
+          <img className="icons-week" src={p1} alt="" /> 
         </div>
         <div className="hover1">
-          {" "}
-          <h5>Fri</h5>{" "}
+          <h5>Fri</h5>
           <p className="font-size-temp">
-            {day4.temp_max} ° {"  " + "  |  "} {day4.temp_min} °{" "}
-          </p>{" "}
+            {day4.temp_max} ° {day4.temp_min} °
+          </p>
           <img className="icons-week" src={shiny} alt="" />
         </div>
         <div className="hover1">
-          {" "}
-          <h5>Sat</h5>{" "}
+          <h5>Sat</h5>
           <p className="font-size-temp">
-            {day5.temp_max} ° {"  " + "  |  "} {day5.temp_min} °{" "}
-          </p>{" "}
-          <img className="icons-week" src={p1} alt="" />{" "}
+            {day5.temp_max} ° {day5.temp_min} °
+          </p>
+          <img className="icons-week" src={p1} alt="" />
         </div>
         <div className="hover1">
-          <h5>Sun</h5>{" "}
+          <h5>Sun</h5>
           <p className="font-size-temp">
-            {day6.temp_max} ° {"  " + "  |  "} {day6.temp_min} °{" "}
-          </p>{" "}
+            {day6.temp_max} ° {day6.temp_min} °
+          </p>
           <img className="icons-week" src={shiny} alt="" />
         </div>
 
         <div className="hover1">
-          {" "}
           <h5>Mon</h5>
           <p className="font-size-temp">
-            {day5.temp_max} ° {"  " + "  |  "} {day5.temp_min} °{" "}
+            {day5.temp_max} ° {day5.temp_min} °
           </p>
           <img className="icons-week" src={p1} alt="" />
         </div>

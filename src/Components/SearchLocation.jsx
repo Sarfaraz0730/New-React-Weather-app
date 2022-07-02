@@ -96,14 +96,21 @@ const SearchLocation = () => {
           <div className="Daily-data-2">
             <div className="grid-box">
               <div className="b1">
-                <p>Pressure </p> <br /> {pressure} hpa
+                <p className="text-design">Pressure </p> <br /> {pressure} hpa
               </div>
               <div className="b1">
-                <p>Humidity </p>
+                <p className="text-design">Humidity </p>
                 <br /> {humidity}%
               </div>
-              <div className="b1">Sunrise</div>
-              <div className="b1">Sunset</div>
+            </div>
+            <div className="sunrise-sunset">
+              <div id="c11">
+                <p className="text-design">Sunrise</p>
+              </div>
+              <div className="c1">
+              
+                <p className="text-design">Sunset</p>
+              </div>
             </div>
 
             <div>
