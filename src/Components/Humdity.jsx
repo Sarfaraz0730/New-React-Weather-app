@@ -44,7 +44,9 @@ const Humdity = () => {
      });
     return (
       <div>
-        <Line data={data}>Hello</Line>
+        <div style={{ width: "98%", height: "50px", padding: "15px" }}>
+          <Line data={data}>Hello</Line>
+        </div>
       </div>
     );
 };

@@ -29,7 +29,7 @@ const Graph = () => {
     datasets: [
       {
         label: "Tempreture",
-        data: [20, 23, 25, 26, 30, 34, 46, 40, 40, 38, 36, 27],
+        data: [20, 23, 23, 26, 30, 34, 42, 40, 40, 40, 39, 39],
         backgroundColor: "#a4d7fe",
         borderColor: "#2ea3fc",
         tension: 0.4,
