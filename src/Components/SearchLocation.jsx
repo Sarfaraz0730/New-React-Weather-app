@@ -109,8 +109,8 @@ const SearchLocation = () => {
                 <p>5:00 AM</p>
               </div>
               <div className="c1">
-              
                 <p className="text-design">Sunset</p>
+                <p>5:00 AM</p>
               </div>
             </div>
 
