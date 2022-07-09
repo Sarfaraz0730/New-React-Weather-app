@@ -110,19 +110,19 @@
   text-align: right;
   line-height: 3px;
   margin: 1px;
- 
+
   border: none;
   margin: 10px;
 }
-#c11{
-    padding: 20px;
+#c11 {
+  padding: 20px;
   font-size: 15px;
   text-align: left;
   line-height: 3px;
   margin: 1px;
- 
+
   border: none;
-  margin: 10px; 
+  margin: 10px;
 }
 .ui-fixing {
   height: auto;
@@ -134,4 +134,10 @@
 }
 .text-design {
   font-weight: bold;
+}
+.suntime {
+  font-size: 12px;
+  font-weight: bold;
+
+  line-height: 3px;
 }

@@ -16,6 +16,8 @@ const SearchLocation = () => {
   const [wind, setWind] = useState("");
   const [humidity, setHumidity] = useState("");
   const [pressure, setPressure] = useState("");
+  const [set, sunSet] = useState("")
+  const[sunsetTime,setSunSetTime] = useState('')
 
   const fetchApi = async () => {
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${search}&&units=metric&appid=35dda4b74680a4f66fe72fd65ba4569d`;
@@ -23,23 +25,38 @@ const SearchLocation = () => {
     const response = await fetch(url);
 
     const resJson = await response.json();
-    console.log("Response Current data ", resJson.name);
+    console.log("Response Current sunset data ", resJson.sys.sunset);
 
     setCity(resJson.main.temp);
     console.log("city temp", city);
     setIcons(resJson.weather[0]);
     setWind(resJson.wind);
+    sunSet(resJson.sys.sunset)
+    console.log("sunset time", set)
     setHumidity(resJson.main.humidity);
     setPressure(resJson.main.pressure);
 
-    // console.log("Current temp", resJson.main.temp);
-    // console.log("city temp" ,  city.temp)
+      
+    let unix = set;
+    let date22 = new Date(unix * 1000);
+
+    console.log("exact sunset time", date22);
+
+    setSunSetTime(date22)
+
+    console.log("hey i am sunset time",sunsetTime)
+  
+ 
   };
 
   useEffect(() => {
     fetchApi();
   }, [search]);
   console.log("city temp", city);
+
+
+     console.log("hey i am sunset time", sunsetTime);
+  
 
   return (
     <>
@@ -106,11 +123,11 @@ const SearchLocation = () => {
             <div className="sunrise-sunset">
               <div id="c11">
                 <p className="text-design">Sunrise</p>
-                <p>5:00 AM</p>
+                <p className="suntime">5:00 AM</p>
               </div>
               <div className="c1">
                 <p className="text-design">Sunset</p>
-                <p>5:00 AM</p>
+                <p className="suntime">7:20 PM</p>
               </div>
             </div>
 
