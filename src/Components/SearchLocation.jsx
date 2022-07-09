@@ -23,7 +23,7 @@ const SearchLocation = () => {
     const response = await fetch(url);
 
     const resJson = await response.json();
-    console.log("Response Current data ", resJson);
+    console.log("Response Current data ", resJson.name);
 
     setCity(resJson.main.temp);
     console.log("city temp", city);
