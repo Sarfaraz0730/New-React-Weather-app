@@ -1,7 +1,7 @@
-.debounceInput-Search{
-    width: 50%;
-    border: 1px solid black;
-    border-radius: 10px;
+.debounceInput-Search {
+  width: 50%;
+  border: 1px solid black;
+  border-radius: 10px;
 }
 .search {
   width: 100%;
@@ -15,17 +15,16 @@
 .autocomplete {
   width: 100%;
   background-color: red;
- border-radius: 5px;
-
+  border-radius: 5px;
 }
-.autocompleteItem{
+.autocompleteItem {
   border-bottom: 1px solid pink;
   padding: 10px 5px;
   cursor: pointer;
   color: greenyellow;
   font-weight: bold;
 }
-.abc{
+.abc {
   background-color: red;
   width: 100%;
 }

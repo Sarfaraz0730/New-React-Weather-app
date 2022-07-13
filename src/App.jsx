@@ -1,18 +1,12 @@
-import './App.css';
-import SearchLocation from './Components/SearchLocation';
-import GeoLocationOfUser from './Components/GeoLocationOfUser';
-
-
-
+import "./App.css";
+import SearchLocation from "./Components/SearchLocation";
+import GeoLocationOfUser from "./Components/GeoLocationOfUser";
 
 function App() {
-  const location =GeoLocationOfUser()
+  const location = GeoLocationOfUser();
   return (
     <div className="App">
       <SearchLocation />
-  
-    
-   
     </div>
   );
 }

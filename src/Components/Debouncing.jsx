@@ -2,13 +2,13 @@ import { useState, useCallback } from "react";
 import "./Debouncing.css";
 
 const Debouncing = () => {
-    const [search, setSearch] = useState([]);
-    d = new Date();
-    localTime = d.getTime();
-    localOffset = d.getTimezoneOffset() * 60000;
-    utc = localTime + localOffset;
-    var atlanta = utc + 1000 * -14400;
-    nd = new Date(atlanta);
+  const [search, setSearch] = useState([]);
+  d = new Date();
+  localTime = d.getTime();
+  localOffset = d.getTimezoneOffset() * 60000;
+  utc = localTime + localOffset;
+  var atlanta = utc + 1000 * -14400;
+  nd = new Date(atlanta);
 
   const debounce = (func) => {
     let timer;
@@ -49,8 +49,8 @@ const Debouncing = () => {
       {search?.length > 0 && (
         <div className="autocomplete">
           {search?.map((e, i) => (
-              <div key={i} className="autocompleteItem">
-                  <span>{ e.name}</span>
+            <div key={i} className="autocompleteItem">
+              <span>{e.name}</span>
             </div>
           ))}
         </div>

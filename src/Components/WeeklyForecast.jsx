@@ -4,6 +4,7 @@ import { useState } from "react";
 import "./WeeklyForecast.css";
 import p1 from "../Components/images/p1.webp";
 import shiny from "../Components/images/shiny.png";
+import Graph from "./Graph";
 const WeeklyForecast = (search) => {
   const [week, setWeek] = useState([]);
   const [day1, setDay1] = useState([]);
@@ -23,7 +24,7 @@ const WeeklyForecast = (search) => {
       const response = await fetch(url);
 
       const res = await response.json();
-      console.log("response", res);
+    
       setWeek(res.list[0].main);
       setDay1(res.list[1].main);
       setDay2(res.list[2].main);
@@ -36,9 +37,10 @@ const WeeklyForecast = (search) => {
     };
 
     console.log("day1", day1.temp);
-
+    
     fetchAPI();
   }, [search]);
+
 
   return (
     <div className="abc">
@@ -63,7 +65,7 @@ const WeeklyForecast = (search) => {
           {" "}
           <h5>Wed</h5>{" "}
           <p className="font-size-temp">
-            {day2.temp_max} °  {day2.temp_min} °{" "}
+            {day2.temp_max} ° {day2.temp_min} °{" "}
           </p>{" "}
           <img className="icons-week" src={shiny} alt="" />{" "}
         </div>
@@ -71,8 +73,8 @@ const WeeklyForecast = (search) => {
           <h5>Thru</h5>{" "}
           <p className="font-size-temp">
             {day3.temp_max} ° {day3.temp_min} °
-          </p> 
-          <img className="icons-week" src={p1} alt="" /> 
+          </p>
+          <img className="icons-week" src={p1} alt="" />
         </div>
         <div className="hover1">
           <h5>Fri</h5>
@@ -102,6 +104,7 @@ const WeeklyForecast = (search) => {
             {day5.temp_max} ° {day5.temp_min} °
           </p>
           <img className="icons-week" src={p1} alt="" />
+          {/* <Graph props= { obj} /> */}
         </div>
       </div>
     </div>

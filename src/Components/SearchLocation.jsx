@@ -16,8 +16,8 @@ const SearchLocation = () => {
   const [wind, setWind] = useState("");
   const [humidity, setHumidity] = useState("");
   const [pressure, setPressure] = useState("");
-  const [set, sunSet] = useState("")
-  const[sunsetTime,setSunSetTime] = useState('')
+  const [set, sunSet] = useState("");
+  const [sunsetTime, setSunSetTime] = useState("");
 
   const fetchApi = async () => {
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${search}&&units=metric&appid=35dda4b74680a4f66fe72fd65ba4569d`;
@@ -25,37 +25,31 @@ const SearchLocation = () => {
     const response = await fetch(url);
 
     const resJson = await response.json();
-    console.log("Response Current sunset data ", resJson.sys.sunset);
+  
 
     setCity(resJson.main.temp);
     console.log("city temp", city);
     setIcons(resJson.weather[0]);
     setWind(resJson.wind);
-    sunSet(resJson.sys.sunset)
-    console.log("sunset time", set)
+    sunSet(resJson.sys.sunset);
+    console.log("sunset time", set);
     setHumidity(resJson.main.humidity);
     setPressure(resJson.main.pressure);
 
-      
     let unix = set;
     let date22 = new Date(unix * 1000);
 
-    console.log("exact sunset time", date22);
 
-    setSunSetTime(date22)
+    setSunSetTime(date22);
 
-    console.log("hey i am sunset time",sunsetTime)
-  
  
   };
 
   useEffect(() => {
     fetchApi();
   }, [search]);
-  console.log("city temp", city);
 
 
-     console.log("hey i am sunset time", sunsetTime);
   
 
   return (

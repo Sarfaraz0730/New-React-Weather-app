@@ -31,7 +31,6 @@
 }
 
 .weekly-forecast > div {
-
   height: 150px;
   width: 40%;
 
@@ -41,19 +40,17 @@
   border: 2px solid blue;
   width: 40%;
 }
-.hover1{
+.hover1 {
   text-align: center;
   padding-bottom: 10px;
-   width: 40%;
-
+  width: 40%;
 }
-.font-size-temp{
+.font-size-temp {
   margin-top: 28px;
   font-size: 10px;
   font-weight: bold;
- 
 }
-.icons-week{
+.icons-week {
   height: 40px;
   width: 40px;
 }

@@ -31,8 +31,6 @@ const GeoLocationOfUser = () => {
         code: 0,
         message: "Geolocation not supported",
       });
-
-      
     }
 
     navigator.geolocation.getCurrentPosition(onSuccess, onError);

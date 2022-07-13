@@ -41,6 +41,7 @@ const Graph = () => {
       },
     ],
   });
+
   return (
     <div>
       <div style={{ width: "98%", height: "90%", padding: "15px" }}>
