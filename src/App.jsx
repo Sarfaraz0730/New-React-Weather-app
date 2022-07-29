@@ -1,14 +1,12 @@
+import { useEffect, useState } from "react";
 import "./App.css";
-import SearchLocation from "./Components/SearchLocation";
-import GeoLocationOfUser from "./Components/GeoLocationOfUser";
+import { CurrentLocation } from "./components/currentlocation.jsx";
 
 function App() {
-  const location = GeoLocationOfUser();
-  return (
-    <div className="App">
-      <SearchLocation />
-    </div>
-  );
-}
+  // const[data,setData]=useState();
 
+  let key = "1afee05f35f4bbefee24aa8566dc0af7";
+
+  return <CurrentLocation k={key} />;
+}
 export default App;

@@ -1,54 +1,58 @@
-import { Line } from "react-chartjs-2";
+import React from "react";
 import { useState } from "react";
-import {
-  Chart as ChartJS,
-  Title,
-  Tooltip,
-  LineElement,
-  Legend,
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  Filler,
-} from "chart.js";
+import Chart from "react-apexcharts";
+import "../App.css";
+function Graph(p) {
+  console.log("api",p.data)
+  const temp=p.data;
 
-ChartJS.register(
-  Title,
-  Tooltip,
-  LineElement,
-  Legend,
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  Filler
-);
+  const element=[];
+console.log("temp",temp)
+  temp.map((el,i)=>{
+    element.push(el.temp.max)
+    console.log("daily",el.temp.max)
+  })
 
-const Graph = () => {
-  const [data, setData] = useState({
-    labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
-    datasets: [
-      {
-        label: "Tempreture",
-        data: [20, 23, 24, 26, 30, 35, 40, 40, 40, 40, 40, 40],
-        backgroundColor: "#a4d7fe",
-        borderColor: "#2ea3fc",
-        tension: 0.4,
-        fill: true,
-        pointStyle: "rect",
-        pointBorderColor: "#2ea3fc",
-        pointRadius: "1",
-        showLine: true,
+    var obj = {
+      options: {
+        chart: {
+          zoom:{
+            enabled:false
+          }
+        },
+        stroke: {
+          curve: 'smooth',
+        },
+        xaxis: {
+          categories:[1,2,3,4,5,6,7,8]
+        },
+        dataLabels: {
+          enabled: false
+        }
       },
-    ],
-  });
-
-  return (
-    <div>
-      <div style={{ width: "98%", height: "90%", padding: "15px" }}>
-        <Line data={data}>Hello</Line>
+      series: [
+        {
+          name: "Temp",
+          data: element
+        }
+      ],
+    };
+    return (
+      <div className="app">
+        <div className="row">
+          <div className="mixed-chart">
+            <Chart
+              options={obj.options}
+              series={obj.series}
+              type="area"
+              width="100%"
+              // align="center"
+            />
+          </div>
+        </div>
       </div>
-    </div>
-  );
-};
+    );
+  }
+
 
 export default Graph;
